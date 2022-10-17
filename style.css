@@ -92,12 +92,16 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
-form {
+form  {
+  display: flex;
+  flex-direction: column;
   border: 2px solid #ff385c;
   padding: 10px;
 }
 
 form label {
+  display: flex;
+  justify-content: space-between;
   font-weight: bold;
 }
 
@@ -110,14 +114,16 @@ form input {
 form button {
   background-color: #ff385c;
   border: none;
+  border-radius:10%;
   color: #fff;
-  font-size: 24px;
+  font-size: 16px;
   padding: 15px;
   width: 100%;
 }
 
 footer {
   background-color: #ff385c;
+  padding-bottom: 25px;
 }
 
 footer p {
@@ -133,23 +139,78 @@ footer p {
     header {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding: 0 30px;
     }
-  
+
+    .logo {
+      font-size: 36px;
+    }
+
     header h1 {
       padding-top: 0;
       font-size: 48px;
     }
-  
-    header nav {
-      margin-top: 8px;
-    }
+
     header nav ul li a:hover {
       color: #bdbdbd;
     }
 
-    .group {
+    form {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
     }
+
+    form input {
+      display: block;
+    }
+
+    form label {
+      display: block;
+    }
+
+    form select {
+      display: block;
+    }
+
+    form button {
+      align-self: flex-start;
+      height: fit-content;
+      width: 10%;
+    }
+
+    .group {
+      display: flex-wrap;
+      flex-direction: row;
+    }
+
+    .ideas {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 10px;
+    }
+
+    .idea {
+      flex: 1 1 calc(45% - 50px);  
+      padding: 10px;
+    }
+
+    section.alternate-background {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    section.alternate-text {
+      flex: 1;
+      flex-basis: 50%;
+    }
+
+    section.alternate-img {
+      flex: 1;
+      flex-basis: 50%;
+    }
+
   }
