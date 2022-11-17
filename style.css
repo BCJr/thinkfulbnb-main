@@ -1,345 +1,291 @@
 /* When a web browser is less than 480 pixels / mobile-first,
    apply these rules. */
 
-   body {
-    font-family: "Lato", sans-serif;
+body {
+  font-family: "Lato", sans-serif;
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 10px 10px 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 0;
+}
+
+section {
+  padding: 20px;
+}
+
+section.alternate-background {
+  background-color: #00a699;
+  color: #fff;
+}
+
+main img {
+  width: 100%;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+header {
+  background-color: #ff385c;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Pangolin", cursive;
+  font-size: 72px;
+  color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+  margin-right: 0;
+}
+
+header nav ul li a:hover {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+form  {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ff385c;
+  padding: 10px;
+}
+
+form label {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+form select,
+form input {
+  margin-bottom: 20px;
+  width: 180px;
+}
+
+form button {
+  background-color: #ff385c;
+  border: none;
+  border-radius:10%;
+  color: #fff;
+  font-size: 16px;
+  padding: 15px;
+  width: 100%;
+}
+
+footer {
+  background-color: #ff385c;
+  padding-bottom: 25px;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* -------  Media Query ------- */
+/* When a web browser is larger than 480 pixels / small tablet,
+   apply these rules. */
+   @media all and (min-width: 480px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+    }
+
+    .logo {
+      font-size: 36px;
+    }
+
+    header h1 {
+      padding-top: 0;
+      font-size: 48px;
+    }
+
+    header nav ul li a:hover {
+      color: #bdbdbd;
+    }
   }
-  
-  h2 {
-    font-size: 26px;
-    font-weight: 400;
-    margin: 0 10px 10px 10px;
-    text-align: center;
-  }
-  
-  h3 {
-    font-size: 18px;
-    font-weight: 500;
-  }
-  
-  p {
-    line-height: 1.5em;
-    margin: 0;
-  }
-  
-  section {
-    padding: 20px;
-  }
-  
-  section.alternate-background {
-    background-color: #00a699;
-    color: #fff;
-  }
-  
-  img {
-    width: 100%;
-  }
-  
-  main img {
-    width: 100%;
-  }
-  
-  .group {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .item {
-    flex: 1;
-    margin: 10px;
-  }
-  
-  .item-double {
-    flex: 2;
-  }
-  
-  header {
-    background-color: #ff385c;
-    padding: 20px 20px 0 20px;
-    text-align: center;
-  }
-  
-  .logo {
-    font-family: "Pangolin", cursive;
-    font-size: 72px;
-    color: #fff;
-  }
-  
-  header nav {
-    display: flex;
-    justify-content: center;
-  }
-  
-  header nav ul {
-    display: flex;
-    padding-left: 0;
-    list-style: none;
-  }
-  
-  header nav ul li {
-    list-style-type: none;
-  }
-  
-  header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 0 20px 0 0;
-  }
-  
-  header nav ul li:last-child a {
-    margin-right: 0;
-  }
-  
-  header nav ul li a:hover {
-    color: #bdbdbd;
-    text-decoration: none;
-  }
-  
-  form  {
-    display: flex;
-    flex-direction: column;
-    border: 2px solid #ff385c;
-    padding: 10px;
-  }
-  
-  form label {
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-  }
-  
-  form select,
-  form input {
-    margin-bottom: 20px;
-    width: 180px;
-  }
-  
-  form button {
-    background-color: #ff385c;
-    border: none;
-    border-radius:10%;
-    color: #fff;
-    font-size: 16px;
-    padding: 15px;
-    width: 100%;
-  }
-  
-  footer {
-    background-color: #ff385c;
-    padding-bottom: 25px;
-  }
-  
-  footer p {
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-  }
-  
+
+/* When a web browser is larger than 768 pixels / large tablet,
+   apply these rules. */
+  @media all and (min-width: 768px) {
+
+    .group {
+      display: flex;
+      flex-direction: row;
+      flex-wrap:wrap;
+    }
+
+    .item-title {
+      display:block;
+      margin:10px;
+      width:100%;
+    }
+
+    .item-img {
+      flex:2;
+      margin:10px;
+    }
+    .item-text {
+      flex:2;
+      margin:10px;
+    }
+
+    /* From mobile
+
+    main img {
+      width: 100%;
+    }
+
+    .group {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .item {
+      flex: 1;
+      margin: 10px;
+    }
+  } */
+
   /* -------  Media Query ------- */
-  /* When a web browser is larger than 480 pixels / small tablet,
-     apply these rules. */
-     @media all and (min-width: 480px) {
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 30px;
-      }
-  
-      .logo {
-        font-size: 36px;
-      }
-  
-      header h1 {
-        padding-top: 0;
-        font-size: 48px;
-      }
-  
-      header nav ul li a:hover {
-        color: #bdbdbd;
-      }
-  /*
-      form {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-  
-      form input {
-        margin-left: 3px;
-        margin-right: 3px;
-      }
-  
-      form label {
-        flex-grow: 1;
-      }
-  
-      form select {
-        margin-left: 3px;
-        margin-right: 3px;
-      }
-  
-      form button {
-        flex-grow: 0;
-        border-radius:0%;  
-        width: 400px;   
-      }   */
-  
+/* When a web browser is larger than 992 pixels / Desktop or larger,
+   apply these rules. */
+   @media all and (min-width: 992px) {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
     }
-  
-  /* When a web browser is larger than 768 pixels / large tablet,
-     apply these rules. */
-    @media all and (min-width: 768px) {
-  
-      .group {
-        display: flex-wrap;
-        flex-direction: row;
-        align-items: stretch;
-      }
-  
-      .group img {
-        width: 100%;
-        height: 100%;
-      }
-      
-      #about h2 {
-        align-self: center;
-      }
-      .item {
-      }
-  
-      .ideas {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        margin: 10px;
-      }
-  
-      .idea {
-        flex: 1 1 calc(45% - 50px);  
-        padding: 10px;
-      }
-  
-      section.alternate-background {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-  
-      div.alternate-text {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 0;
-        font-size: 13px;
-        padding: 2%;
-      }
-  
-      div.alternate-text ul {
-        padding-left: 25px;
-      }
-  
-      div.alternate-img {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 0;
-        text-align: center;
-      }
-  
+
+    .logo {
+      font-size: 36px;
     }
-    /* -------  Media Query ------- */
-  /* When a web browser is larger than 992 pixels / Desktop or larger,
-     apply these rules. */
-     @media all and (min-width: 992px) {
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 30px;
-      }
-  
-      .logo {
-        font-size: 36px;
-      }
-  
-      header h1 {
-        padding-top: 0;
-        font-size: 48px;
-      }
-  
-      header nav ul li a:hover {
-        color: #bdbdbd;
-      }
-  
-      form {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-      }
-  
-      form input {
-        display: block;
-      }
-  
-      form label {
-        display: block;
-      }
-  
-      form select {
-        display: block;
-      }
-  
-      form button {
-        align-self: flex-start;
-        height: fit-content;
-        width: 10%;
-      }
-  
-      .group {
-        display: flex-wrap;
-        flex-direction: row;
-        align-content: center;
-      }
-  
-      .ideas {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        margin: 10px;
-      }
-  
-      .idea {
-        flex: 1 1 calc(45% - 50px);  
-        padding: 10px;
-      }
-  
-      section.alternate-background {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-      }
-  
-      div.alternate-text {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 0;
-        font-size: 13px;
-        padding: 2%;
-      }
-  
-      div.alternate-text ul {
-        padding-left: 25px;
-      }
-  
-      div.alternate-img {
-        flex-grow: 1;
-        flex-shrink: 1;
-        flex-basis: 0;
-        text-align: center;
-      }
-  
+
+    header h1 {
+      padding-top: 0;
+      font-size: 48px;
     }
+
+    header nav ul li a:hover {
+      color: #bdbdbd;
+    }
+
+    form {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    form input {
+      display: block;
+    }
+
+    form label {
+      display: block;
+    }
+
+    form select {
+      display: block;
+    }
+
+    form button {
+      align-self: flex-start;
+      height: fit-content;
+      width: 10%;
+    }
+
+    .group {
+      display: flex-wrap;
+      flex-direction: row;
+      align-content: center;
+    }
+
+    .ideas {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 10px;
+    }
+
+    .idea {
+      flex: 1 1 calc(45% - 50px);  
+      padding: 10px;
+    }
+
+    section.alternate-background {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    div.alternate-text {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+      font-size: 13px;
+      padding: 2%;
+    }
+
+    div.alternate-text ul {
+      padding-left: 25px;
+    }
+
+    div.alternate-img {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+      text-align: center;
+    }
+
+  }
